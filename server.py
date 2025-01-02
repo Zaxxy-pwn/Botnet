@@ -29,4 +29,4 @@ def start_server(host, port):
 
 # Menjalankan server C&C
 if __name__ == "__main__":
-    start_server("114.10.19.54", 8080)  # Ganti dengan IP yang sesuai untuk server C&C
+    start_server("0.0.0.0", 8080)  # Ganti dengan IP yang sesuai untuk server C&C
